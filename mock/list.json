@@ -1,0 +1,210 @@
+{
+    "entry": {
+        "appId": "6203e443a67cd5000720a0fc",
+        "entryId": "5ce65da73f0bf44810e06f13",
+        "name": "请假记录查询",
+        "type": "dash",
+        "components": {
+            "_widget_1558601127352": {
+                "title": "申请人",
+                "defaultConfig": {},
+                "type": "text_filter",
+                "fields": [
+                    {
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "type": "user",
+                        "field": "_widget_1511745835680"
+                    }
+                ],
+                "triggers": [
+                    "_widget_1466130193327"
+                ],
+                "width": 10,
+                "height": 6,
+                "posX": 0,
+                "posY": 0
+            },
+            "_widget_1558601127353": {
+                "title": "所在部门",
+                "defaultConfig": {},
+                "type": "dept_filter",
+                "fields": [
+                    {
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "type": "dept",
+                        "field": "_widget_1511745835666"
+                    }
+                ],
+                "triggers": [
+                    "_widget_1466130193327"
+                ],
+                "width": 10,
+                "height": 6,
+                "posX": 10,
+                "posY": 0
+            },
+            "_widget_1558601127354": {
+                "title": "请假详情.日期",
+                "defaultConfig": {},
+                "type": "date_filter",
+                "fields": [
+                    {
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "type": "datetime",
+                        "subform": "_widget_1465973504542",
+                        "subField": "_widget_1465973504560"
+                    }
+                ],
+                "triggers": [
+                    "_widget_1466130193327"
+                ],
+                "width": 20,
+                "height": 6,
+                "posX": 20,
+                "posY": 0
+            },
+            "_widget_1558601127355": {
+                "title": "部门主管意见",
+                "defaultConfig": {},
+                "type": "text_filter",
+                "fields": [
+                    {
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "type": "radiogroup",
+                        "field": "_widget_1509553640553"
+                    }
+                ],
+                "triggers": [
+                    "_widget_1466130193327"
+                ],
+                "width": 10,
+                "height": 6,
+                "posX": 40,
+                "posY": 0
+            },
+            "_widget_1466130193327": {
+                "title": "请假记录",
+                "filter": {
+                    "cond": [],
+                    "rel": "and"
+                },
+                "hasExport": true,
+                "type": "data_table",
+                "width": 60,
+                "height": 30,
+                "posX": 0,
+                "posY": 6,
+                "metrics": [],
+                "fields": [
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1465973504308",
+                        "tag": "f_1524709941543",
+                        "text": "填表时间",
+                        "format": "yyyy-MM-dd HH:mm:ss",
+                        "type": "datetime",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "填表时间",
+                        "groupRule": "year"
+                    },
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1511745835680",
+                        "tag": "f_1524709941544",
+                        "text": "申请人",
+                        "type": "user",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "申请人"
+                    },
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1511745835666",
+                        "tag": "f_1524709941545",
+                        "text": "所在部门",
+                        "type": "dept",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "所在部门"
+                    },
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1465973504891",
+                        "tag": "f_1524709941546",
+                        "text": "请假类型",
+                        "type": "combo",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "请假类型"
+                    },
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1465973504542",
+                        "tag": "f_1524709941547",
+                        "text": "请假详情",
+                        "type": "subform",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "请假详情",
+                        "items": [
+                            {
+                                "name": "_widget_1465973504560",
+                                "title": "日期",
+                                "type": "datetime",
+                                "format": "yyyy-MM-dd"
+                            },
+                            {
+                                "name": "_widget_1465973504562",
+                                "title": "时段",
+                                "type": "combo"
+                            },
+                            {
+                                "name": "_widget_1465973504564",
+                                "title": "天数",
+                                "type": "number"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1524813730610",
+                        "tag": "f_1524813778606",
+                        "text": "合计天数",
+                        "type": "number",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "合计天数"
+                    },
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1465973505028",
+                        "tag": "f_1524709941549",
+                        "text": "请假事由",
+                        "type": "textarea",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "请假事由"
+                    },
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1465973505073",
+                        "tag": "f_1524709941550",
+                        "text": "上传证明",
+                        "type": "upload",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "上传证明"
+                    },
+                    {
+                        "id": "5760cac3551b8b4c253e7e93",
+                        "name": "_widget_1509553640553",
+                        "tag": "f_1524709941551",
+                        "text": "部门主管意见",
+                        "type": "radiogroup",
+                        "form": "5760cac3551b8b4c253e7e93",
+                        "title": "部门主管意见"
+                    }
+                ],
+                "yFields": [],
+                "xFields": [],
+                "form": "5760cac3551b8b4c253e7e93",
+                "formulas": []
+            }
+        },
+        "createTime": "2022-02-09T15:56:51.105Z",
+        "updateTime": "2022-02-09T15:56:51.105Z"
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "name": "请假审批",
+    "icon": 8,
+    "color": 5,
+    "isTemplate": false,
+    "isFakeDataInstruct": false,
+    "isOwner": true,
+    "isAppManager": true,
+    "hasFlowManager": true,
+    "entryList": [
+        {
+            "id": "5b713fdc0182bb250dc8377a"
+        },
+        {
+            "id": "5760cac3551b8b4c253e7e93"
+        },
+        {
+            "id": "5ce65da73f0bf44810e06f13"
+        },
+        {
+            "id": "5ce65db2d23e194ab024aee4"
+        },
+        {
+            "id": "62069916c0e3c400096b78fa"
+        }
+    ],
+    "entryMap": {
+        "5760cac3551b8b4c253e7e93": {
+            "_id": "6203e443a67cd5000720a0fd",
+            "name": "请假申请",
+            "type": "form",
+            "parent": "1",
+            "entryId": "5760cac3551b8b4c253e7e93",
+            "seq": 1,
+            "hasFlow": true,
+            "hasCoop": false,
+            "text": "请假申请"
+        },
+        "5b713fdc0182bb250dc8377a": {
+            "_id": "6203e443a67cd5000720a0fe",
+            "name": "使用说明",
+            "type": "form",
+            "parent": "1",
+            "entryId": "5b713fdc0182bb250dc8377a",
+            "seq": 0,
+            "hasFlow": false,
+            "hasCoop": true,
+            "text": "使用说明"
+        },
+        "5ce65da73f0bf44810e06f13": {
+            "_id": "6203e443a67cd5000720a0ff",
+            "name": "请假记录查询",
+            "type": "dash",
+            "parent": "1",
+            "entryId": "5ce65da73f0bf44810e06f13",
+            "seq": 514,
+            "hasFlow": false,
+            "dashOff": false,
+            "text": "请假记录查询"
+        },
+        "5ce65db2d23e194ab024aee4": {
+            "_id": "6203e443a67cd5000720a100",
+            "name": "请假统计",
+            "type": "dash",
+            "parent": "1",
+            "entryId": "5ce65db2d23e194ab024aee4",
+            "seq": 2051,
+            "hasFlow": false,
+            "hasCoop": false,
+            "dashOff": false,
+            "text": "请假统计"
+        },
+        "62069916c0e3c400096b78fa": {
+            "_id": "62069916c0e3c400096b78fb",
+            "hasCoop": false,
+            "hasFlow": false,
+            "seq": 3075,
+            "is_system_form": false,
+            "name": "请假列表",
+            "type": "dash",
+            "parent": "1",
+            "icon": 4,
+            "color": 3,
+            "entryId": "62069916c0e3c400096b78fa",
+            "text": "请假列表"
+        }
+    },
+    "bufferState": {},
+    "installChannel": "market"
+}

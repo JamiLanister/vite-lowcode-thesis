@@ -1,0 +1,394 @@
+{
+    "entry": {
+        "_id": "6203e443a67cd5000720a0fd",
+        "appId": "6203e443a67cd5000720a0fc",
+        "entryId": "5760cac3551b8b4c253e7e93",
+        "name": "请假申请",
+        "content": {
+            "type": "form",
+            "items": [
+                {
+                    "widget": {
+                        "type": "datetime",
+                        "widgetName": "_widget_1465973504308",
+                        "enable": false,
+                        "visible": true,
+                        "allowBlank": true,
+                        "rely": null,
+                        "value": "today",
+                        "format": "yyyy-MM-dd HH:mm:ss"
+                    },
+                    "description": null,
+                    "label": "填表时间",
+                    "lineWidth": 12
+                },
+                {
+                    "widget": {
+                        "type": "user",
+                        "widgetName": "_widget_1511745835680",
+                        "enable": true,
+                        "visible": true,
+                        "allowBlank": false,
+                        "rely": null,
+                        "value": {
+                            "_id": "100000000000000000000001",
+                            "nickname": "当前用户"
+                        },
+                        "noRepeat": false,
+                        "limit": {},
+                        "limitWidget": null,
+                        "valueOption": 0
+                    },
+                    "description": null,
+                    "label": "申请人",
+                    "lineWidth": 12
+                },
+                {
+                    "widget": {
+                        "type": "dept",
+                        "widgetName": "_widget_1511745835666",
+                        "enable": true,
+                        "visible": true,
+                        "allowBlank": false,
+                        "value": {
+                            "_id": "110000000000000000000001",
+                            "name": "当前用户所在部门"
+                        },
+                        "noRepeat": false,
+                        "limit": {},
+                        "valueOption": 0
+                    },
+                    "description": null,
+                    "label": "所在部门",
+                    "lineWidth": 12
+                },
+                {
+                    "widget": {
+                        "type": "combo",
+                        "widgetName": "_widget_1465973504891",
+                        "enable": true,
+                        "visible": true,
+                        "allowBlank": false,
+                        "colorEnable": true,
+                        "items": [
+                            {
+                                "text": "事假",
+                                "value": "事假",
+                                "color": "#FA5353"
+                            },
+                            {
+                                "text": "病假",
+                                "value": "病假",
+                                "color": "#F5C13C"
+                            },
+                            {
+                                "text": "婚假",
+                                "value": "婚假",
+                                "color": "#2FCD6E"
+                            },
+                            {
+                                "text": "产假",
+                                "value": "产假",
+                                "color": "#3F8CFF"
+                            },
+                            {
+                                "text": "丧假",
+                                "value": "丧假",
+                                "color": "#D144F4"
+                            },
+                            {
+                                "text": "陪护假",
+                                "value": "陪护假",
+                                "color": "#656565"
+                            },
+                            {
+                                "text": "年假",
+                                "value": "年假",
+                                "color": "#FF9D8D"
+                            },
+                            {
+                                "text": "调休",
+                                "value": "调休",
+                                "color": "#A5C71C"
+                            },
+                            {
+                                "text": "产检",
+                                "value": "产检",
+                                "color": "#00C7C7"
+                            },
+                            {
+                                "text": "其他",
+                                "value": "其他",
+                                "color": "#7957FF"
+                            }
+                        ]
+                    },
+                    "description": null,
+                    "label": "请假类型",
+                    "lineWidth": 12
+                },
+                {
+                    "widget": {
+                        "type": "subform",
+                        "widgetName": "_widget_1465973504542",
+                        "enable": true,
+                        "visible": true,
+                        "allowBlank": true,
+                        "subform_create": true,
+                        "subform_edit": true,
+                        "subform_delete": true,
+                        "items": [
+                            {
+                                "label": "日期",
+                                "widget": {
+                                    "type": "datetime",
+                                    "widgetName": "_widget_1465973504560",
+                                    "enable": true,
+                                    "visible": true,
+                                    "allowBlank": false,
+                                    "rely": null,
+                                    "value": "today",
+                                    "format": "yyyy-MM-dd"
+                                }
+                            },
+                            {
+                                "label": "时段",
+                                "widget": {
+                                    "type": "combo",
+                                    "widgetName": "_widget_1465973504562",
+                                    "enable": true,
+                                    "visible": true,
+                                    "allowBlank": false,
+                                    "items": [
+                                        {
+                                            "text": "全天",
+                                            "value": "全天"
+                                        },
+                                        {
+                                            "text": "上午",
+                                            "value": "上午"
+                                        },
+                                        {
+                                            "text": "下午",
+                                            "value": "下午"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "label": "天数",
+                                "widget": {
+                                    "type": "number",
+                                    "widgetName": "_widget_1465973504564",
+                                    "enable": false,
+                                    "visible": true,
+                                    "allowBlank": false,
+                                    "rely": {
+                                        "widgets": [
+                                            "_widget_1465973504542._widget_1465973504562"
+                                        ],
+                                        "formula": {
+                                            "type": "formula",
+                                            "text": "公式",
+                                            "formula": "IF($_widget_1465973504542._widget_1465973504562#==\"全天\",1,0.5)\n"
+                                        }
+                                    },
+                                    "value": null
+                                }
+                            }
+                        ],
+                        "subform_insert": false
+                    },
+                    "description": "<p>需请多天假，每个日期添加一条记录。</p>",
+                    "label": "请假详情",
+                    "lineWidth": 12
+                },
+                {
+                    "widget": {
+                        "type": "number",
+                        "widgetName": "_widget_1524813730610",
+                        "enable": false,
+                        "visible": true,
+                        "allowBlank": false,
+                        "rely": {
+                            "formula": {
+                                "formula": "SUM($_widget_1465973504542._widget_1465973504564#)",
+                                "text": "公式",
+                                "type": "formula"
+                            },
+                            "widgets": [
+                                "_widget_1465973504542._widget_1465973504564"
+                            ]
+                        },
+                        "value": null
+                    },
+                    "description": null,
+                    "label": "合计天数",
+                    "lineWidth": 12
+                },
+                {
+                    "widget": {
+                        "type": "textarea",
+                        "widgetName": "_widget_1465973505028",
+                        "enable": true,
+                        "visible": true,
+                        "allowBlank": true,
+                        "noRepeat": false
+                    },
+                    "description": null,
+                    "label": "请假事由",
+                    "lineWidth": 12
+                },
+                {
+                    "widget": {
+                        "type": "upload",
+                        "widgetName": "_widget_1465973505073",
+                        "enable": true,
+                        "visible": true,
+                        "allowBlank": true,
+                        "maxFileCount": 10
+                    },
+                    "description": null,
+                    "label": "上传证明",
+                    "lineWidth": 12
+                },
+                {
+                    "widget": {
+                        "type": "radiogroup",
+                        "widgetName": "_widget_1509553640553",
+                        "enable": false,
+                        "visible": false,
+                        "allowBlank": false,
+                        "items": [
+                            {
+                                "text": "同意",
+                                "value": "同意"
+                            },
+                            {
+                                "text": "不同意",
+                                "value": "不同意"
+                            }
+                        ]
+                    },
+                    "description": null,
+                    "label": "部门主管意见",
+                    "lineWidth": 12
+                }
+            ],
+            "validators": [],
+            "submitRule": 3,
+            "layout": "normal",
+            "fieldShowRules": [],
+            "widget_submit_rules": {}
+        },
+        "type": "form",
+        "filterFields": [],
+        "queryFields": [],
+        "hasCoop": false,
+        "hasFlow": true,
+        "hasCache": false,
+        "hasExtParams": false,
+        "createTime": "2022-02-09T15:56:51.105Z",
+        "updateTime": "2022-02-09T15:56:51.105Z",
+        "isPublicData": false,
+        "comment": {
+            "enable": false,
+            "channels": [
+                "site"
+            ]
+        },
+        "tabs": [],
+        "mobileLayout": {
+            "label": {
+                "layout": "vertical"
+            },
+            "description": {
+                "visible": true
+            }
+        },
+        "formEvents": [],
+        "submit_prompt": {
+            "hasLastContent": false
+        },
+        "flow": {
+            "flowVer": "1",
+            "hasLogView": true,
+            "allowRevoke": true
+        },
+        "hasFlowPrint": false,
+        "pcLayout": {
+            "label": {
+                "layout": "vertical"
+            },
+            "description": {
+                "visible": true
+            },
+            "input": {
+                "width": "normal"
+            }
+        }
+    },
+    "flow": {
+        "allowSave": true,
+        "allowSubmit": true
+    },
+    "authGroups": [
+        {
+            "name": "发起流程",
+            "groupId": -1,
+            "dataAuth": {
+                "rel": "and",
+                "cond": []
+            },
+            "dataPerms": {
+                "read": false,
+                "export": false,
+                "create": false,
+                "import": false,
+                "update": false,
+                "delete": false,
+                "batch_print": false,
+                "copy": false,
+                "flow_read": false,
+                "flow_create": true,
+                "flow_close": false,
+                "flow_transfer": false,
+                "flow_activate": false,
+                "flow_update": false,
+                "flow_batch_print": false,
+                "flow_export": false,
+                "flow_delete": false,
+                "flow_copy": false,
+                "flow_batch_update": false,
+                "flow_import": false,
+                "batch_update": false
+            },
+            "optAuth": {}
+        }
+    ],
+    "bufferState": {},
+    "canSaveSignature": true,
+    "hasBpaAnalysis": true,
+    "isTemplateVisit": false,
+    "views": [
+        {
+            "appId": "6203e443a67cd5000720a0fc",
+            "entryId": "5760cac3551b8b4c253e7e93",
+            "viewId": "system",
+            "name": "默认视图样式",
+            "pcView": "table",
+            "table": {
+                "rowHeight": "low",
+                "fieldConfigType": "allField",
+                "customShowFields": []
+            },
+            "mobileView": "tableMobile",
+            "tableMobile": {
+                "rowHeight": "low",
+                "fieldConfigType": "fromPc",
+                "customShowFields": []
+            },
+            "sort": []
+        }
+    ]
+}

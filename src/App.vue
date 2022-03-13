@@ -22,6 +22,5 @@ export default {
   font-weight: 400 !important;
 }
 .el-button{
-  font-weight: 400 !important;
 }
 </style>
